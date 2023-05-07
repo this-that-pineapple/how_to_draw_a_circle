@@ -13,6 +13,19 @@ public class Circle {
         return pixels;
     }
 
+    public static boolean[][] circleWithSinAndCos2(int sizeX, int sizeY, int radius, int xCenter, int yCenter) {
+        double PHI = 2 * Math.PI;
+        boolean[][] pixels = new boolean[sizeX][sizeY];
+        int numberOfPixels = (int) PHI * radius;
+
+        for (int i = 0; i < numberOfPixels; i++) {
+            pixels[(int) (Math.round(radius * Math.cos((PHI * i) / numberOfPixels)) + xCenter)]
+                    [(int) (Math.round(radius * Math.sin((PHI * i) / numberOfPixels)) + yCenter)] = true;
+        }
+
+        return pixels;
+    }
+
     public static boolean[][] circleWithSquareRoot(int size, int radius, int xCenter, int yCenter) {
         boolean[][] pixels = new boolean[size][size];
 

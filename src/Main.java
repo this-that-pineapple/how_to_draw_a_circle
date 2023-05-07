@@ -5,9 +5,13 @@ public class Main {
         int size = 100;
         boolean[][] pixels = Circle.circleWithAdditionAndSubtraction(size + 1, size / 2, size / 2, size / 2);
 
-        Display.draw(pixels, 800);
+        // To open a window to see the result
+//        Display.draw(pixels, 800);
 
-        if (eval){
+        // To export a png of the circle
+        Image.save(pixels, "test");
+
+        if (eval) {
             System.out.println("Evaluation:");
             System.out.println("Circle with Sin and Cos");
             Evaluation.timeOverAllRanges(Circle::circleWithSinAndCos, 1000000);
