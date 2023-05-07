@@ -25,6 +25,20 @@ public class Circle {
         return pixels;
     }
 
+    public static boolean[][] circleWithSquareRootGood(int size, int radius, int xCenter, int yCenter) {
+        boolean[][] pixels = new boolean[size][size];
+
+        for (int x = 0; x < radius * 0.850903524534; x++) {
+            int y = (int) Math.sqrt(radius * radius - x * x);
+            pixels[x + xCenter][y + yCenter] = pixels[x + xCenter][-y + yCenter] =
+                    pixels[y + xCenter][x + yCenter] = pixels[y + xCenter][-x + yCenter] =
+                            pixels[-x + xCenter][y + yCenter] = pixels[-x + xCenter][-y + yCenter] =
+                                    pixels[-y + xCenter][x + yCenter] = pixels[-y + xCenter][-x + yCenter] = true;
+        }
+
+        return pixels;
+    }
+
     public static boolean[][] circleWithMultiplication(int size, int radius, int xCenter, int yCenter) {
         boolean[][] pixels = new boolean[size][size];
 

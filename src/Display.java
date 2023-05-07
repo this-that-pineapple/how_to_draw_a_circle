@@ -10,7 +10,6 @@ public class Display {
 
     public static void draw(boolean[][] booleans, int size) {
         Display display = new Display(booleans, size);
-        System.out.println("draw field: ");
         display.drawField();
     }
 
