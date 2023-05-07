@@ -20,7 +20,9 @@ public class Evaluation {
     public static void timeOverAllRanges(Function5<Integer, Integer, Integer, Integer, ?> function, int amount) {
         LinkedList<Integer> resolutions = new LinkedList<>();
         resolutions.add(100);
+        resolutions.add(250);
         resolutions.add(500);
+        resolutions.add(750);
         resolutions.add(1000);
 
         for (int resolution : resolutions) {
