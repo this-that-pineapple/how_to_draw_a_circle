@@ -1,13 +1,13 @@
 public class Circle {
 
     public static boolean[][] circleWithSinAndCos(int size, int radius, int xCenter, int yCenter) {
-        double PHI = 2 * Math.PI;
+        double TAU = 2 * Math.PI;
         boolean[][] pixels = new boolean[size][size];
-        int numberOfPixels = (int) PHI * radius;
+        int numberOfPixels = (int) TAU * radius;
 
         for (int i = 0; i < numberOfPixels; i++) {
-            pixels[(int) (Math.round(radius * Math.cos((PHI * i) / numberOfPixels)) + xCenter)]
-                    [(int) (Math.round(radius * Math.sin((PHI * i) / numberOfPixels)) + yCenter)] = true;
+            pixels[(int) (Math.round(radius * Math.cos((TAU * i) / numberOfPixels)) + xCenter)]
+                    [(int) (Math.round(radius * Math.sin((TAU * i) / numberOfPixels)) + yCenter)] = true;
         }
 
         return pixels;
